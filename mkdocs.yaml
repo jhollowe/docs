@@ -39,6 +39,7 @@ theme:
     # - navigation.instant # act as a single page application using XHR loading
     - navigation.indexes # allow index.md for section header
     - navigation.top # add a "Back to Top" button
+    - navigation.expand
     - search.suggest
 
 plugins:
@@ -83,3 +84,8 @@ nav:
   - Welcome to Proxmoxer: index.md
   - Setup: setup.md
   - Basic Usage: basic_usage.md
+  - Definitions: definitions.md
+  - Examples:
+      - Sending Files: examples/files.md
+      - Tasks: examples/tasks.md
+  - Testing: testing.md
