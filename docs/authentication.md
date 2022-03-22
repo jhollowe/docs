@@ -90,10 +90,10 @@ Paramiko uses the following order to attempt authentication:[^1]
 
 ### Key
 
-Paramiko defaults to looking for in `~/.ssh` for openssh-style key file names. If a `private_key_file` argument is present, it is used before any keys automatically found.
+Paramiko defaults to looking for in `~/.ssh` for openssh-style key file names. If a `private_key_file` argument is present, it disabled the auto-discovery of other keys. If a key requires a passphrase, it can be supplied with the `passphrase` argument.
 
 ```python
-prox = ProxmoxAPI('<host_ip_or_domain>', user='<username>', private_key_file='<path_to_file>', backend='ssh_paramiko')
+prox = ProxmoxAPI('<host_ip_or_domain>', user='<username>', private_key_file='<path_to_file>', passphrase='<passphrase>', backend='ssh_paramiko')
 ```
 
 ### Password
@@ -107,7 +107,7 @@ prox = ProxmoxAPI('<host_ip_or_domain>', user='<username>', password='<password>
 ### All Paramiko Arguments
 
 ```python
-prox = ProxmoxAPI('<host_ip_or_domain>', user='<username>', password='<password>', port=<port>, private_key_file='<path_to_file>', timeout=<timeout_in_seconds>, sudo=<True|False>, backend='ssh_paramiko')
+prox = ProxmoxAPI('<host_ip_or_domain>', user='<username>', password='<password>', port=<port>, private_key_file='<path_to_file>', passphrase='<passphrase>', timeout=<timeout_in_seconds>, sudo=<True|False>, backend='ssh_paramiko')
 ```
 
 [^1]: [https://docs.paramiko.org/en/stable/api/client.html#paramiko.client.SSHClient.connect](https://docs.paramiko.org/en/stable/api/client.html#paramiko.client.SSHClient.connect)
