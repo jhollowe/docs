@@ -3,7 +3,7 @@
 
 Proxmoxer is a wrapper around the APIs for Proxmox products.
 
-It was inspired by slumber, but it is dedicated only to Proxmox. It allows not only REST API use over HTTPS, but the same api over SSH. Like [Proxmoxia](https://github.com/baseblack/Proxmoxia), it dynamically creates attributes which responds to the attributes you've attempted to reach.
+Proxmoxer handles all the authentication, path building, and data communication so you can focus on your goals. It requires no updates for new Proxmox versions as there are hardcoded paths; your code defines how you want to interact with Proxmox and proxmoxer just facilitates.
 
 ## Supported Services
 
@@ -15,7 +15,7 @@ Below are the Proxmox services supported by this library.[^1]
 
 ## Supported Backends (Connection Methods) {#supported-backends}
 
-Below are the backends supported by this library.[^1]
+The following backends are supported:[^1]
 
 * HTTPS
 * SSH (openssh)
